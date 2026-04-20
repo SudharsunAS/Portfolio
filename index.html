@@ -1,0 +1,226 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudharsun Portfolio</title>
+
+<style>
+/* Global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  background: #020617;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #38bdf8;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  width: 90%;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Hero */
+#home {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+#home h1 {
+  font-size: 48px;
+}
+
+#home p {
+  font-size: 20px;
+}
+
+/* Sections */
+section {
+  margin-top: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1, h2 {
+  color: #60a5fa;
+}
+
+/* Cards */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #38bdf8;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  #home h1 {
+    font-size: 32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero -->
+<div id="home" class="container">
+  <h1>SUDHARSUN A</h1>
+  <p>Aspiring Full Stack Developer 🚀</p>
+  <a href="#" class="btn">Download Resume</a>
+</div>
+
+<!-- About -->
+<section id="about" class="container">
+  <h2>About</h2>
+  <p>
+    I am a B.Tech student passionate about software development and solving real-world problems.
+    I enjoy learning new technologies and building meaningful applications.
+  </p>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="container">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Medivault</h3>
+    <p>Secure medical record system with authentication and data protection.</p>
+  </div>
+
+  <div class="card">
+    <h3>Chat App</h3>
+    <p>Real-time chat application built using MERN stack.</p>
+  </div>
+
+</section>
+
+<!-- Skills -->
+<section id="skills" class="container">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+    <span>SQL</span>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="container">
+  <h2>Contact</h2>
+  <p>Email: sudharsun@email.com</p>
+  <p>GitHub: github.com/yourprofile</p>
+  <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Sudharsun</p>
+</footer>
+
+<!-- JavaScript for scroll animation -->
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+```
